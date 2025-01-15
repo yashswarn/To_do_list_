@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(33, 40, 67);
+    min-width: 100vw;
+    justify-content: center; 
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    min-width:30vw;
+    min-height: 10px;
+    background-color: white; 
+    border-radius: 10px;
+    /* position: relative; */
+}
+
+.cardheading h1{
+    margin-top: 30px;
+    margin-left: 20px;
+    color: rgb(33, 33, 82);
+}
+
+#icon-img{
+    height: 30px;
+}
+
+.taskdiv{
+    margin-left: 20px;
+}
+
+.taskdiv button{
+    background-color: orange;
+    width: 120px;
+    height: 50px;
+    color: white;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: -125px;
+    cursor: pointer;
+    border: none;
+}
+
+.taskdiv button:hover{
+    background-color: black;
+}
+
+.taskdiv input{
+    background: rgb(234, 234, 234);
+    /* background: transparent; */
+    outline: none;
+    height: 50px;
+    width: 350px;
+    border-radius: 50px;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+
+}
+
+#list-container{
+    list-style-type: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 350px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 22px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    /* top: 268px; */
+    left: 480px;
+    /* margin-top: 10px; */
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    /* right: -200px; */
+    /* top: -270px; */
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+/* ul li span:hover{
+    background: #edeef0;
+} */
+
+/* @media(min-width:400px){
+    .cardheading{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .taskdiv{
+        /* display: flex; */
+        /* justify-content: center; 
+        width: 500px;
+    } 
+
+
+    /* .card{
+
+        display: flex-wrap;
+    } 
+} 
